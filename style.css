@@ -6,9 +6,142 @@
 /* colors */
 :root {
     --primary-color: #fefefe;
-   --primary-text-color: #030303;
-   --secondary-color:#F6F6F8;
-   --secondary-text-color: #303030;
-   --footer-text: #505050;
-   
+    --primary-text-color: #030303;
+    --secondary-color: #f6f6f8;
+    --secondary-text-color: #303030;
+    --footer-text: #505050;
+}
+
+/* navbar */
+.nav-container {
+    background-color: var(--primary-color);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.nav-logo {
+    font-weight: 600;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo svg {
+    font-size: 20px;
+    color: var(--primary-text-color);
+}
+
+.site-title {
+    margin: 0 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    color: var(--primary-text-color) !important;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid var(--primary-text-color);
+}
+
+.nav-items {
+    text-align: center;
+}
+
+.navbar-nav {
+    gap: 1rem;
+}
+
+/* hero section */
+.hero-section {
+    height: 100vh;
+    background: url("images/hero.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    text-align: left;
+    padding: 40px 0;
+}
+
+.overlay-text {
+    max-width: 100%;
+    width: 100%;
+}
+
+.shop-button{
+    background-color: var(--primary-text-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.shop-button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    border: 1px solid var(--primary-text-color);
+}
+
+
+@media (max-width: 768px) {
+    .overlay-text {
+        padding: 1.5rem;
+    }
+}
+
+/* bestseller section */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-image .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-card:hover .hover-img {
+    opacity: 1;
+}
+
+.product-card:hover .front-img {
+    opacity: 0;
 }
